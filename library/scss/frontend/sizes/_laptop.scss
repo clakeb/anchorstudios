@@ -1,0 +1,17 @@
+/*
+ * File: _laptop.scss
+ * Description: Laptop Styles
+ *
+ */
+
+body {
+    #inner {
+        #content {
+            .home-section {
+                .home_section {
+                    @include grid-column( $columns: 10, $center: true );
+                }
+            }
+        }
+    }
+}

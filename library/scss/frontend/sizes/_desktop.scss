@@ -1,0 +1,32 @@
+/*
+ * File: _desktop.scss
+ * Description: Desktop Styles
+ *
+ */
+
+body {
+    #header {
+
+        #title-area {
+            @include grid-column( 8 );
+        }
+
+        .widget-area {
+            @include grid-column( 4, true, false, false, false, false, false, false );
+        }
+    }
+
+    #inner {
+        #content {
+            .home-section {
+                .home_section {
+                    @include grid-column( $columns: 9, $center: true );
+                }
+            }
+
+            .portfolio-archive {
+                @include grid-column( 4, $collapse: true );
+            }
+        }
+    }
+}

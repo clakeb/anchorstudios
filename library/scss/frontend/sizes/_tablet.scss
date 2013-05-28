@@ -1,0 +1,63 @@
+/*
+ * File: _tablet.scss
+ * Description: Tablet Styles
+ *
+ */
+
+body {
+
+    #header {
+
+        #title-area {
+            @include grid-column( 6 );
+            text-align: left;
+        }
+
+        .widget-area {
+            @include grid-column( 6, true, false, false, false, false, false, false );
+        }
+    }
+
+    #inner {
+        #content {
+            @include grid-row( collapse );
+
+            .service {
+                .featured-image {
+                    padding-top: emCalc( 38px );
+                }
+
+                &:nth-child( 2n ) {
+                    text-align: right;
+
+                    .featured-image {
+                        @include grid-column( 4 );
+                    }
+
+                    .home-section-content {
+                        @include grid-column( 8, true, false, false, false, false, false, false );
+                    }
+                }
+
+                &:nth-child( 2n + 1 ) {
+                    text-align: left;
+
+                    .featured-image {
+                        @include grid-column( 4, true, false, false, false, false, false, false );
+                    }
+
+                    .home-section-content {
+                        @include grid-column( 8 );
+                    }
+                }
+            }
+
+            .portfolio-archive {
+                @include grid-column( 6, $collapse: true );
+            }
+        }
+    }
+
+    #footer {
+    }
+}
